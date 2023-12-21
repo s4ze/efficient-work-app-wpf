@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Threading;
+using System.Collections.ObjectModel;
 
-namespace PomodoroTimer
+namespace EfficientWorkApp
 {
     public partial class MainWindow : Window
     {
+        private ObservableCollection<string> tasks;
+
         private DispatcherTimer timer;
         private const int workDurationDefault = 25 * 60; // Длительность работы в секундах
         private int workDuration = workDurationDefault; 
@@ -30,6 +32,8 @@ namespace PomodoroTimer
             btnWork.Background = Brushes.SaddleBrown;
             btnRest.Background = Brushes.Transparent;
             btnStartPause.Foreground = PomodoroRedBrush;
+            tasks = new ObservableCollection<string>();
+            taskListBox.ItemsSource = tasks;
         }
 
         private void InitializeTimer()
@@ -167,6 +171,15 @@ namespace PomodoroTimer
         {
             TimeSpan time = TimeSpan.FromSeconds(seconds);
             return string.Format("{0:D2}:{1:D2}", time.Minutes, time.Seconds);
+        }
+        private void AddTask_Click(object sender, RoutedEventArgs e)
+        {
+            string newTask = taskTextBox.Text.Trim();
+            if (!string.IsNullOrEmpty(newTask))
+            {
+                tasks.Add(newTask);
+                taskTextBox.Text = string.Empty;
+            }
         }
     }
 }
