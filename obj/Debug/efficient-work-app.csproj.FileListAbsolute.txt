@@ -1,0 +1,17 @@
+C:\coding projects\wpf\efficient-work-app\obj\Debug\efficient-work-app.csproj.AssemblyReference.cache
+C:\coding projects\wpf\efficient-work-app\obj\Debug\MainWindow.baml
+C:\coding projects\wpf\efficient-work-app\obj\Debug\MainWindow.g.cs
+C:\coding projects\wpf\efficient-work-app\obj\Debug\App.g.cs
+C:\coding projects\wpf\efficient-work-app\obj\Debug\efficient-work-app_MarkupCompile.cache
+C:\coding projects\wpf\efficient-work-app\obj\Debug\efficient-work-app.g.resources
+C:\coding projects\wpf\efficient-work-app\obj\Debug\efficient_work_app.Properties.Resources.resources
+C:\coding projects\wpf\efficient-work-app\obj\Debug\efficient-work-app.csproj.GenerateResource.cache
+C:\coding projects\wpf\efficient-work-app\obj\Debug\efficient-work-app.csproj.CoreCompileInputs.cache
+C:\coding projects\wpf\efficient-work-app\bin\Debug\efficient-work-app.exe.config
+C:\coding projects\wpf\efficient-work-app\bin\Debug\efficient-work-app.exe
+C:\coding projects\wpf\efficient-work-app\bin\Debug\efficient-work-app.pdb
+C:\coding projects\wpf\efficient-work-app\obj\Debug\efficient-work-app.exe
+C:\coding projects\wpf\efficient-work-app\obj\Debug\efficient-work-app.pdb
+C:\coding projects\wpf\efficient-work-app\bin\Debug\Quicksand-Bold.ttf
+C:\coding projects\wpf\efficient-work-app\bin\Debug\Quicksand-Light.ttf
+C:\coding projects\wpf\efficient-work-app\obj\Debug\efficient-work-app_Content.g.cs
