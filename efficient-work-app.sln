@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.7.34202.233
+VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "efficient-work-app", "efficient-work-app.csproj", "{E51DBEEB-7A97-460C-BD74-9FF32B95C3F2}"
 EndProject
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {156EDA5D-125A-4B2F-9F60-165630259ADB}
+		SolutionGuid = {0FB6BC3D-4E55-47B7-A29D-CB8B03114813}
 	EndGlobalSection
 EndGlobal
