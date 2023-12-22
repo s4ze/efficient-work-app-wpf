@@ -1,41 +1,18 @@
 ﻿<Window x:Class="EfficientWorkApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Name="Window" Title="Efficient Work App" Height="700" Width="600" ResizeMode="NoResize" Background="DarkRed">
-
+    Name="Window" Title="Efficient Work App" Height="800" Width="800" ResizeMode="NoResize" Background="White">
     <Grid>
-        <Grid Margin="50,50,50,0" Height="250" Width="500" VerticalAlignment="Top">
-            <Rectangle Name="bg_Rectangle" Width="500"  RadiusX="25" RadiusY="25" Height="250" VerticalAlignment="Top">
-                <Rectangle.Fill>
-                    <SolidColorBrush Color="White" Opacity="0.1"/>
-                </Rectangle.Fill>
-            </Rectangle>
-            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,10,0,0" Width="260" Height="60">
-                <Button x:Name="btnWork" Content="Работа" Width="120" Height="50" Margin="5"  Click="BtnWork_Click" FontFamily="Quicksand" FontSize="20" FontWeight="Bold" Foreground="White" BorderBrush="{x:Null}"/>
-                <Button x:Name="btnRest" Content="Отдых" Width="120" Height="50" Margin="5" Click="BtnRest_Click" FontFamily="Quicksand" FontSize="20" FontWeight="Bold" Foreground="White" BorderBrush="{x:Null}"/>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <StackPanel Height="50" Orientation="Horizontal">
+                <Button Content="Pomodoro" Click="BtnClickPomodoroPage" Margin="5" Width="70"/>
+                <Button Content="Water" Click="BtnClickWaterPage" Margin="5" Width="70"/>
+                <Button Content="Warmup" Click="BtnClickWarmupPage" Margin="5" Width="70"/>
+                <Button Content="Food" Click="BtnClickFoodPage" Margin="5" Width="70"/>
             </StackPanel>
-            <TextBlock x:Name="timerDisplay" Text="25:00" FontSize="70" FontFamily="Quicksand" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" Background="Transparent" Margin="0,90,0,0"/>
-            <Button x:Name="btnStartPause" Content="Старт" Width="120" FontFamily="Quicksand" FontSize="20" FontWeight="Bold" Height="50" Margin="0,0,0,10" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White" Click="BtnStartPause_Click"/>
         </Grid>
-        <Grid Margin="0,250,0,0" Height="250" Width="500">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
-                <TextBox x:Name="taskTextBox" Width="300" Margin="0,0,10,0" />
-                <Button Content="Добавить" Width="100" Click="AddTask_Click"/>
-            </StackPanel>
-
-            <ListBox x:Name="taskListBox" Grid.Row="1" Margin="10" Padding="5,5,5,5">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <CheckBox Content="{Binding}" />
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-        </Grid>
+        <Frame x:Name="Main" Margin="5" NavigationUIVisibility="Hidden">
+            
+        </Frame>
     </Grid>
-    
 </Window>

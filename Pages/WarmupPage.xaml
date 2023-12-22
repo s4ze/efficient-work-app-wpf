@@ -1,0 +1,18 @@
+﻿<Page Name="Page" x:Class="warmup.WarmupPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WarmupPage" Height="300" Width="400">
+    <Grid Width="250" Height="250">
+        <ListBox x:Name="taskListBox" Margin="10" Padding="5" SelectionMode="Extended">   
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="NumberOfTimes" Text="F" FontFamily="Quicksand" FontSize="15"></TextBlock>
+                        <Rectangle Height="50" Width="1" Stroke="Gray"></Rectangle>
+                        <TextBlock Name="Description" Text="Sample text for description" FontFamily="Quicksand" FontSize="15"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

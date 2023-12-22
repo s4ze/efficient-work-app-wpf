@@ -12,3 +12,11 @@ C:\coding projects\wpf\efficient-work-app\bin\Debug\efficient-work-app.exe
 C:\coding projects\wpf\efficient-work-app\bin\Debug\efficient-work-app.pdb
 C:\coding projects\wpf\efficient-work-app\obj\Debug\efficient-work-app.exe
 C:\coding projects\wpf\efficient-work-app\obj\Debug\efficient-work-app.pdb
+C:\coding projects\wpf\efficient-work-app\obj\Debug\Pages\PomodoroAndToDoPage.g.cs
+C:\coding projects\wpf\efficient-work-app\obj\Debug\Pages\PomodoroAndToDoPage.baml
+C:\coding projects\wpf\efficient-work-app\obj\Debug\Pages\WaterPage.baml
+C:\coding projects\wpf\efficient-work-app\obj\Debug\Pages\WaterPage.g.cs
+C:\coding projects\wpf\efficient-work-app\obj\Debug\Pages\FoodPage.baml
+C:\coding projects\wpf\efficient-work-app\obj\Debug\Pages\FoodPage.g.cs
+C:\coding projects\wpf\efficient-work-app\obj\Debug\Pages\WarmupPage.baml
+C:\coding projects\wpf\efficient-work-app\obj\Debug\Pages\WarmupPage.g.cs
