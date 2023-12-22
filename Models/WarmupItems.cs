@@ -1,11 +1,11 @@
-﻿namespace efficient_work_app.Models
+﻿namespace EfficientWorkApp.Models
 {
     public class WarmupItem
     {
-        public string CountText { get; set; }
+        public string countText { get; set; }
 
-        public string TitleText { get; set; }
-        public string MultiLineText { get; set; }
+        public string titleText { get; set; }
+        public string multiLineText { get; set; }
 
     }
 }

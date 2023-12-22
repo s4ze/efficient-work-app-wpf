@@ -1,8 +1,7 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace water
+namespace Water
 {
     public partial class WaterPage : Page
     {
@@ -13,7 +12,7 @@ namespace water
             DataContext = this;
         }
 
-        public int WaterAmount
+        public int waterAmount
         {
             get { return totalWater; }
             set
@@ -27,31 +26,31 @@ namespace water
             }
         }
 
-        private void AddWater_Click(object sender, RoutedEventArgs e)
+        private void addWaterClick(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
             int amount = int.Parse(button.Tag.ToString());
-            WaterAmount += amount;
+            waterAmount += amount;
         }
 
-        private void Reset_Click(object sender, RoutedEventArgs e)
+        private void resetClick(object sender, RoutedEventArgs e)
         {
-            WaterAmount = 0;
-            waterDisplay.Text = WaterAmount.ToString();
+            waterAmount = 0;
+            waterDisplay.Text = waterAmount.ToString();
         }
 
-        private void CustomVolume_Click(object sender, RoutedEventArgs e)
+        private void customVolumeClick(object sender, RoutedEventArgs e)
         {
             customVolumeTextBox.Visibility = Visibility.Visible;
         }
 
-        private void AddCustomVolume_Click(object sender, RoutedEventArgs e)
+        private void addCustomVolumeClick(object sender, RoutedEventArgs e)
         {
             if (int.TryParse(customVolumeTextBox.Text, out int customVolume))
             {
-                WaterAmount += customVolume;
+                waterAmount += customVolume;
             }
-            waterDisplay.Text = WaterAmount.ToString();
+            waterDisplay.Text = waterAmount.ToString();
             customVolumeTextBox.Visibility = Visibility.Collapsed;
             customVolumeTextBox.Text = "";
         }

@@ -1,8 +1,7 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace food
+namespace Food
 {
     public partial class FoodPage : Page
     {
@@ -13,7 +12,7 @@ namespace food
             DataContext = this;
         }
 
-        public int FoodAmount
+        public int foodAmount
         {
             get { return totalFood; }
             set
@@ -27,31 +26,31 @@ namespace food
             }
         }
 
-        private void AddFood_Click(object sender, RoutedEventArgs e)
+        private void addFoodClick(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
             int amount = int.Parse(button.Tag.ToString());
-            FoodAmount += amount;
+            foodAmount += amount;
         }
 
-        private void Reset_Click(object sender, RoutedEventArgs e)
+        private void resetClick(object sender, RoutedEventArgs e)
         {
-            FoodAmount = 0;
-            foodDisplay.Text = FoodAmount.ToString();
+            foodAmount = 0;
+            foodDisplay.Text = foodAmount.ToString();
         }
 
-        private void CustomQuantity_Click(object sender, RoutedEventArgs e)
+        private void customQuantityClick(object sender, RoutedEventArgs e)
         {
             customQuantityTextBox.Visibility = Visibility.Visible;
         }
 
-        private void AddCustomQuantity_Click(object sender, RoutedEventArgs e)
+        private void addCustomQuantityClick(object sender, RoutedEventArgs e)
         {
             if (int.TryParse(customQuantityTextBox.Text, out int customQuantity))
             {
-                FoodAmount += customQuantity;
+                foodAmount += customQuantity;
             }
-            foodDisplay.Text = FoodAmount.ToString();
+            foodDisplay.Text = foodAmount.ToString();
             customQuantityTextBox.Visibility = Visibility.Collapsed;
             customQuantityTextBox.Text = "";
         }

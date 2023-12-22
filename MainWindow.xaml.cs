@@ -1,12 +1,8 @@
-﻿using System;
-using System.Globalization;
-using System.Windows;
-using System.Windows.Data;
-using System.Windows.Media;
-using pomodoro;
-using water;
-using warmup;
-using food;
+﻿using System.Windows;
+using Pomodoro;
+using Water;
+using Warmup;
+using Food;
 
 namespace EfficientWorkApp
 {
@@ -21,19 +17,19 @@ namespace EfficientWorkApp
         private readonly WaterPage waterPage = new WaterPage();
         private readonly WarmupPage warmupPage = new WarmupPage();
         private readonly FoodPage foodPage = new FoodPage();
-        public void BtnClickPomodoroPage(object sender, RoutedEventArgs e)
+        public void btnClickPomodoroPage(object sender, RoutedEventArgs e)
         {
             Main.Content = pomodoroPage;
         }
-        public void BtnClickWaterPage(object sender, RoutedEventArgs e)
+        public void btnClickWaterPage(object sender, RoutedEventArgs e)
         {
             Main.Content = waterPage;
         }
-        public void BtnClickWarmupPage(object sender, RoutedEventArgs e)
+        public void btnClickWarmupPage(object sender, RoutedEventArgs e)
         {
             Main.Content = warmupPage;
         }
-        public void BtnClickFoodPage(object sender, RoutedEventArgs e)
+        public void btnClickFoodPage(object sender, RoutedEventArgs e)
         {
             Main.Content = foodPage;
         }

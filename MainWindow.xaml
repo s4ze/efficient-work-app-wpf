@@ -5,10 +5,10 @@
     <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom">
             <StackPanel Height="50" Orientation="Horizontal">
-                <Button Content="Pomodoro" Click="BtnClickPomodoroPage" Margin="5" Width="70"/>
-                <Button Content="Water" Click="BtnClickWaterPage" Margin="5" Width="70"/>
-                <Button Content="Warmup" Click="BtnClickWarmupPage" Margin="5" Width="70"/>
-                <Button Content="Food" Click="BtnClickFoodPage" Margin="5" Width="70"/>
+                <Button Content="Pomodoro" Click="btnClickPomodoroPage" Margin="5" Width="70"/>
+                <Button Content="Water" Click="btnClickWaterPage" Margin="5" Width="70"/>
+                <Button Content="Warmup" Click="btnClickWarmupPage" Margin="5" Width="70"/>
+                <Button Content="Food" Click="btnClickFoodPage" Margin="5" Width="70"/>
             </StackPanel>
         </Grid>
         <Frame x:Name="Main" Margin="5" NavigationUIVisibility="Hidden">
