@@ -12,7 +12,7 @@ using System.Windows.Threading;
 
 namespace pomodoro
 {
-    public partial class PomodoroAndToDoPage : Page, INotifyPropertyChanged
+    public partial class PomodoroAndToDoPage : Page
     {
         public PomodoroAndToDoPage()
         {
