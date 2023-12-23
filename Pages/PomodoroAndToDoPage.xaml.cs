@@ -8,8 +8,10 @@ using System.Windows.Threading;
 
 namespace Pomodoro
 {
+    public delegate void WorkStatusHandler(bool isWorking);
     public partial class PomodoroAndToDoPage : Page
     {
+        
         public PomodoroAndToDoPage()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace Pomodoro
             taskListBox.ItemsSource = tasks;
         }
         private ObservableCollection<string> tasks;
-
+        public event WorkStatusHandler StatusChanged;
         private DispatcherTimer timer;
         private const int workDurationDefault = 25 * 60; // Длительность работы в секундах
         private int workDuration = workDurationDefault;
@@ -67,6 +69,7 @@ namespace Pomodoro
             btnWork.Background = pomodoroDarkRedBrush;
             btnRest.Background = Brushes.Transparent;
             Page.Background = currentColorTheme();
+            StatusChanged?.Invoke(isWorking);
         }
         private void setRest()
         {
@@ -79,6 +82,7 @@ namespace Pomodoro
             btnRest.Background = pomodoroDarkBlueBrush;
             btnWork.Background = Brushes.Transparent;
             Page.Background = currentColorTheme();
+            StatusChanged?.Invoke(isWorking);
         }
         private void timerTick(object sender, EventArgs e)
         {

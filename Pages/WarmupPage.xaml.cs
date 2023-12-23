@@ -27,7 +27,7 @@ namespace Warmup
 
         private void addItem(string countText, string titleText, string multiLineText)
         {
-            warmupItems.Add(new WarmupItem { countText = countText, titleText = titleText, multiLineText = multiLineText });
+            warmupItems.Add(new WarmupItem { firstText = countText, secondMainText = titleText, secondSecondaryText = multiLineText });
         }
     }
 }

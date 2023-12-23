@@ -3,17 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="WarmupPage" Height="350" Width="500">
     <Grid Width="450" Height="350">
-        <ListBox x:Name="taskListBox" ItemsSource="{Binding warmupItems}" Margin="10" Padding="5" SelectionMode="Extended" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">   
+        <ListBox x:Name="taskListBox" ItemsSource="{Binding warmupItems}" Margin="10" Padding="5" SelectionMode="Extended" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="{x:Null}" BorderBrush="{x:Null}">   
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <Rectangle Stroke="Gray" StrokeThickness="1" RadiusX="15" RadiusY="15"/>
+                        <Rectangle Fill="White" StrokeThickness="1" RadiusX="15" RadiusY="15"/>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding countText}" TextAlignment="Center" FontFamily="Quicksand" FontSize="15" Width="100" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding firstText}" TextAlignment="Center" FontFamily="Quicksand" FontSize="15" Width="100" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
                             <Rectangle Height="Auto" Width="1" Stroke="Gray" Margin="5"/>
                             <StackPanel Orientation="Vertical">
-                                <TextBlock Text="{Binding titleText}" FontFamily="Quicksand" FontSize="15" TextWrapping="Wrap" Width="280" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                <TextBlock Text="{Binding multiLineText}" FontFamily="Quicksand" FontSize="11" TextWrapping="Wrap" Width="280" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding secondMainText}" FontFamily="Quicksand" FontSize="15" TextWrapping="Wrap" Width="280" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding secondSecondaryText}" FontFamily="Quicksand" FontSize="11" TextWrapping="Wrap" Width="280" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </StackPanel>
                         </StackPanel>
                     </Grid>

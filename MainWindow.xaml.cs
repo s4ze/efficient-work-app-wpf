@@ -3,15 +3,19 @@ using Pomodoro;
 using Water;
 using Warmup;
 using Food;
+using System.Windows.Media;
 
-namespace EfficientWorkApp
+namespace EfficientWorkApp 
 {
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
             Main.Content = pomodoroPage;
+            pomodoroPage.StatusChanged += changeBackgroundColor;
+            Window.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#BA4949"));
         }
         private readonly PomodoroAndToDoPage pomodoroPage = new PomodoroAndToDoPage();
         private readonly WaterPage waterPage = new WaterPage();
@@ -32,6 +36,17 @@ namespace EfficientWorkApp
         public void btnClickFoodPage(object sender, RoutedEventArgs e)
         {
             Main.Content = foodPage;
+        }
+        public void changeBackgroundColor(bool workStatus)
+        {
+            if (workStatus) 
+            {
+                Window.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#BA4949"));
+            }
+            else
+            {
+                Window.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#38858A"));
+            }
         }
     }
 }
