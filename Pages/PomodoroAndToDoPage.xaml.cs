@@ -56,7 +56,30 @@ namespace Pomodoro
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += timerTick;
         }
-
+        private void setWork()
+        {
+            timer.Stop();
+            isWorking = true;
+            isTimerRunning = false;
+            workDuration = workDurationDefault;
+            timerDisplay.Text = formatTime(workDuration);
+            btnStartPause.Foreground = pomodoroRedBrush;
+            btnWork.Background = pomodoroDarkRedBrush;
+            btnRest.Background = Brushes.Transparent;
+            Page.Background = currentColorTheme();
+        }
+        private void setRest()
+        {
+            timer.Stop();
+            isWorking = false;
+            isTimerRunning = false;
+            restDuration = restDurationDefault;
+            timerDisplay.Text = formatTime(restDuration);
+            btnStartPause.Foreground = pomodoroBlueBrush;
+            btnRest.Background = pomodoroDarkBlueBrush;
+            btnWork.Background = Brushes.Transparent;
+            Page.Background = currentColorTheme();
+        }
         private void timerTick(object sender, EventArgs e)
         {
             if (isWorking)
@@ -69,10 +92,7 @@ namespace Pomodoro
                     isWorking = false;
                     workDuration = workDurationDefault; // Сброс длительности работы
                     timerDisplay.Text = formatTime(restDuration);
-                    Page.Background = currentColorTheme();
-                    btnStartPause.Foreground = pomodoroBlueBrush;
-                    btnRest.Background = pomodoroDarkBlueBrush;
-                    btnWork.Background = Brushes.Transparent;
+                    setRest();
                 }
             }
             else
@@ -85,85 +105,21 @@ namespace Pomodoro
                     isWorking = true;
                     restDuration = restDurationDefault; // Сброс длительности отдыха
                     timerDisplay.Text = formatTime(workDuration);
-                    Page.Background = pomodoroRedBrush;
-                    btnStartPause.Foreground = pomodoroRedBrush;
-                    btnWork.Background = pomodoroDarkRedBrush;
-                    btnRest.Background = Brushes.Transparent;
+                    setWork();
                 }
             }
         }
 
         private void btnWorkClick(object sender, RoutedEventArgs e)
         {
-            if (isTimerRunning)
-            {
-                if (isWorking)
-                {
-                    timer.Stop();
-                    isTimerRunning = false;
-                    btnStartPause.Content = "Старт";
-                    workDuration = workDurationDefault;
-                    timerDisplay.Text = formatTime(workDuration);
-                }
-                else
-                {
-                    timer.Stop();
-                    isWorking = true;
-                    isTimerRunning = false;
-                    btnStartPause.Content = "Старт";
-                    timerDisplay.Text = formatTime(workDuration);
-                    Page.Background = pomodoroRedBrush;
-                    btnStartPause.Foreground = pomodoroRedBrush;
-                    btnWork.Background = pomodoroDarkRedBrush;
-                    btnRest.Background = Brushes.Transparent;
-                }
-            }
-            else
-            {
-                isWorking = true;
-                workDuration = workDurationDefault;
-                timerDisplay.Text = formatTime(workDuration);
-                Page.Background = pomodoroRedBrush;
-                btnStartPause.Foreground = pomodoroRedBrush;
-                btnWork.Background = pomodoroDarkRedBrush;
-                btnRest.Background = Brushes.Transparent;
-            }
+            setWork();
+            btnStartPause.Content = "Старт";
         }
 
         private void btnRestClick(object sender, RoutedEventArgs e)
         {
-            if (isTimerRunning)
-            {
-                if (isWorking)
-                {
-                    timer.Stop();
-                    isWorking = false;
-                    isTimerRunning = false;
-                    btnStartPause.Content = "Старт";
-                    timerDisplay.Text = formatTime(restDuration);
-                    Page.Background = currentColorTheme();
-                    btnStartPause.Foreground = pomodoroBlueBrush;
-                    btnWork.Background = Brushes.Transparent;
-                    btnRest.Background = pomodoroDarkBlueBrush;
-                }
-                else
-                {
-                    timer.Stop();
-                    isTimerRunning = false;
-                    btnStartPause.Content = "Старт";
-                    restDuration = restDurationDefault;
-                    timerDisplay.Text = formatTime(restDuration);
-                }
-            }
-            else
-            {
-                isWorking = false;
-                timerDisplay.Text = formatTime(restDuration);
-                Page.Background = currentColorTheme();
-                btnStartPause.Foreground = pomodoroBlueBrush;
-                btnRest.Background = pomodoroDarkBlueBrush;
-                btnWork.Background = Brushes.Transparent;
-            }
+            setRest();
+            btnStartPause.Content = "Старт";
         }
 
         private void btnStartPauseClick(object sender, RoutedEventArgs e)

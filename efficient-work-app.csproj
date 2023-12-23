@@ -86,7 +86,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\WarmupItems.cs" />
+    <Compile Include="Models\WarmupItem.cs" />
     <Compile Include="Pages\FoodPage.xaml.cs">
       <DependentUpon>FoodPage.xaml</DependentUpon>
     </Compile>
